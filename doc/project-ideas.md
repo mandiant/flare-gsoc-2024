@@ -51,7 +51,7 @@ Extend FLOSS to use the rendering techniques pioneered by QUANTUMSTRAND.
 | ---- | ----- | ------ | ----- |
 | Medium | Large | Moritz, Mike, Richard, Willi | [https://github.com/mandiant/flare-floss/issues/943](https://github.com/mandiant/flare-floss/issues/943) |
 
-[QUANTUMSTRAND](https://github.com/mandiant/flare-floss/tree/quantumstrand/floss/qs)is an experiment that augments traditional strings.exe output with context to aid in malware analysis and reverse engineering. For example, we show the structure of a file alongside its strings and mute/highlight entries based on their global prevalence, library association, expert rules, and more.
+[QUANTUMSTRAND](https://github.com/mandiant/flare-floss/tree/quantumstrand/floss/qs) is an experiment that augments traditional strings.exe output with context to aid in malware analysis and reverse engineering. For example, we show the structure of a file alongside its strings and mute/highlight entries based on their global prevalence, library association, expert rules, and more.
 
 [FLOSS](https://github.com/mandiant/flare-floss) is a tool that automatically extracts obfuscated strings from malware, rendering the human-readable data in a way that enables rapid reverse engineering.
 
