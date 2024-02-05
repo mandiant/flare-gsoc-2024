@@ -6,3 +6,5 @@ See our [GSoC Organization and Projects page](https://summerofcode.withgoogle.co
 For those interested in applying, we have a non-exhaustive list of project ideas and contributor guidance. When you have a question, reach out by creating a new topic in [GitHub discussions](https://github.com/mandiant/flare-gsoc-2024/discussions) and tagging flare-gsoc.
 
 See you this summer!
+
+![FLARE logo](https://github.com/mandiant/flare-gsoc-2024/blob/main/doc/FLARE.png)<br />
