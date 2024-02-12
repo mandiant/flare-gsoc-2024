@@ -109,7 +109,7 @@ dncil is a Common Intermediate Language (CIL) disassembly library written in Pyt
 ### Required Skills
 
   - Solid knowledge of Python 3
-  - Basic understanding of instruction set emulation or moderate familiarity with one or more emulation frameworks such as [Unicorn](https://www.unicorn-engine.org/), [flare-emu](https://github.com/mandiant/flare-emu), [speakeasy](https://github.com/mandiant/speakeasy), etc.
+  - Basic understanding of instruction set emulation and/or moderate familiarity with one or more emulation frameworks such as [Unicorn](https://www.unicorn-engine.org/), [flare-emu](https://github.com/mandiant/flare-emu), [speakeasy](https://github.com/mandiant/speakeasy), etc.
   - Basic understanding of reverse engineering / malware analysis
   - Basic understanding of Git
   - Experience or interest with CIL/.NET internals
