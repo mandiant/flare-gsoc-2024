@@ -92,9 +92,25 @@ Extend dncil to support a CIL instruction emulator.
 
 dncil is a Common Intermediate Language (CIL) disassembly library written in Python that supports parsing the header, instructions, and exception handlers of .NET managed methods. Parsed data is exposed through an object-oriented API to help you quickly develop CIL analysis tools using dncil. The goal of this project is to extend dncil to support a basic CIL instruction emulator. This would enable users of the library to evaluate the effects of a sequence of CIL instructions, such as a pure C# method body, and programmatically inspect the virtual CPU state. We imagine that this could be used to build a version of FLOSS that automatically deobfuscates strings in .NET program.
 
+### Deliverables
+
+- Research
+  - Understand the basics of instruction set emulation
+  - Understand [Common Intermediate Language (CIL) instruction set](https://download.microsoft.com/download/7/3/3/733ad403-90b2-4064-a81e-01035a7fe13c/ms%20partition%20iii.pdf) (PDF), most importantly, the state of the evaluation stack before and after each CIL instruction is executed
+  - Understand dncil’s [opcode representation](https://github.com/mandiant/dncil/blob/main/dncil/cil/opcode.py) of each CIL instruction
+- Identify Changes and Improvements
+  - Suggest changes and/or improvements to dncil, if any, needed to programmatically emulate CIL instructions and examine virtual CPU state
+  - Discuss ideas with mentors and dncil user community
+- Implementation
+  - Implement proposed changes and improvements
+- Evaluation and Knowledge Sharing
+  - Test deliverables and gather feedback from users
+  - Write blog post about experience and project achievements
+
 ### Required Skills
 
   - Solid knowledge of Python 3
+  - Basic understanding of instruction set emulation and/or basic familiarity with using/the goals of emulation frameworks such as [Unicorn](https://www.unicorn-engine.org/), [flare-emu](https://github.com/mandiant/flare-emu), [speakeasy](https://github.com/mandiant/speakeasy), etc.
   - Basic understanding of reverse engineering / malware analysis
   - Basic understanding of Git
   - Experience or interest with CIL/.NET internals
