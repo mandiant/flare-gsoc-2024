@@ -13,7 +13,7 @@ Improve capa's usability and performance
 
 | Difficulty | Size | Potential Mentors | Link |
 | ---- | ----- | ------ | ----- |
-| Hard | Large | Blas, Moritz, Mike, Willi | [https://github.com/mandiant/capa/discussions/1973](https://github.com/mandiant/capa/discussions/1973) |
+| Hard | Large (estimated 350 hours) | Blas, Moritz, Mike, Willi | [https://github.com/mandiant/capa/discussions/1973](https://github.com/mandiant/capa/discussions/1973) |
 
 capa is the FLARE team's open-source tool to identify program capabilities in executables and sandbox traces. capa can provide overwhelming and confusing output, especially for new users. This project aims to improve capa's usability by improving the command line interface (CLI) and by potentially developing a web-based user-interface (e.g. based on PyQt).
 
@@ -49,7 +49,7 @@ Extend FLOSS to use the rendering techniques pioneered by QUANTUMSTRAND.
 
 | Difficulty | Size | Potential Mentors | Link |
 | ---- | ----- | ------ | ----- |
-| Medium | Large | Moritz, Mike, Richard, Willi | [https://github.com/mandiant/flare-floss/issues/943](https://github.com/mandiant/flare-floss/issues/943) |
+| Medium | Large (estimated 350 hours) | Moritz, Mike, Richard, Willi | [https://github.com/mandiant/flare-floss/issues/943](https://github.com/mandiant/flare-floss/issues/943) |
 
 [QUANTUMSTRAND](https://github.com/mandiant/flare-floss/tree/quantumstrand/floss/qs) is an experiment that augments traditional strings.exe output with context to aid in malware analysis and reverse engineering. For example, we show the structure of a file alongside its strings and mute/highlight entries based on their global prevalence, library association, expert rules, and more.
 
@@ -88,7 +88,7 @@ Extend dncil to support a CIL instruction emulator.
 
 | Difficulty | Size | Potential Mentors | Link |
 | ---- | ----- | ------ | ----- |
-| Hard | Large | Mike, Willi | https://github.com/mandiant/dncil |
+| Hard | Large (estimated 350 hours) | Mike, Willi | https://github.com/mandiant/dncil |
 
 dncil is a Common Intermediate Language (CIL) disassembly library written in Python that supports parsing the header, instructions, and exception handlers of .NET managed methods. Parsed data is exposed through an object-oriented API to help you quickly develop CIL analysis tools using dncil. The goal of this project is to extend dncil to support a basic CIL instruction emulator. This would enable users of the library to evaluate the effects of a sequence of CIL instructions, such as a pure C# method body, and programmatically inspect the virtual CPU state. We imagine that this could be used to build a version of FLOSS that automatically deobfuscates strings in .NET program.
 
@@ -105,7 +105,7 @@ Add ARM architecture support to capa.
 
 | Difficulty | Size | Potential Mentors | Link |
 | ---- | ----- | ------ | ----- |
-| Hard | Large | Moritz, Willi, Mike | [capa#1774](https://github.com/mandiant/capa/issues/1774 ) |
+| Hard | Large (estimated 350 hours) | Moritz, Willi, Mike | [capa#1774](https://github.com/mandiant/capa/issues/1774 ) |
 
 capa is the FLARE team’s open-source tool to identify program capabilities using an extensible rule set. Each rule is matched against features that capa extracts from a program. Extracted features include file-level features such as strings, section names, imports, and exports and function-level features such as API calls, string and byte references, instruction mnemonics, and number constants. capa uses feature extractors, called "backends", to extract features from supported file types (PE, ELF, and .NET) and architectures (32- and 64-bit x86). Each backend is built around an existing tool or library that provides file parsing and disassembly capabilities. capa uses this to extract features. capa currently implements backends using Vivisect, IDA Pro, dnfile, and Ghidra. The goal of this project is to extend capa to process ARM binaries.
 
@@ -122,7 +122,7 @@ Add P-code support to capa’s existing Ghidra backend.
 
 | Difficulty | Size | Potential Mentors | Link |
 | ---- | ----- | ------ | ----- |
-| Hard | Large | Mike, Willi | https://github.com/mandiant/capa |
+| Hard | Large (estimated 350 hours) | Mike, Willi | https://github.com/mandiant/capa |
 
 capa is the FLARE team’s open-source tool to identify program capabilities using an extensible rule set. Each rule is matched against features that capa extracts from a program. Extracted features include file-level features such as strings, section names, imports, and exports and function-level features such as API calls, string and byte references, instruction mnemonics, and number constants. capa uses feature extractors, called "backends", to extract features from supported file types (PE, ELF, and .NET) and architectures (32- and 64-bit x86). Each backend is built around an existing tool or library that provides file parsing and disassembly capabilities. capa uses this to extract features. capa currently implements backends using Vivisect, IDA Pro, dnfile, and Ghidra.
 
