@@ -81,3 +81,57 @@ Brand new output format released as part of FLOSS v4 in late 2024.
 - Basic understanding of Git
 - Experience or interest with file formats such as PE, ELF, and/or Mach-O
 - Experience or interest in user interface and/or user experience design
+
+## dncil: CIL Emulation
+
+Extend dncil to support a CIL instruction emulator.
+
+| Difficulty | Size | Potential Mentors | Link |
+| ---- | ----- | ------ | ----- |
+| Hard | Large | Mike, Willi | https://github.com/mandiant/dncil |
+
+dncil is a Common Intermediate Language (CIL) disassembly library written in Python that supports parsing the header, instructions, and exception handlers of .NET managed methods. Parsed data is exposed through an object-oriented API to help you quickly develop CIL analysis tools using dncil. The goal of this project is to extend dncil to support a basic CIL instruction emulator. This would enable users of the library to evaluate the effects of a sequence of CIL instructions, such as a pure C# method body, and programmatically inspect the virtual CPU state. We imagine that this could be used to build a version of FLOSS that automatically deobfuscates strings in .NET program.
+
+### Required Skills
+
+  - Solid knowledge of Python 3
+  - Basic understanding of reverse engineering / malware analysis
+  - Basic understanding of Git
+  - Experience or interest with CIL/.NET internals
+
+## capa: ARM support
+
+Add ARM architecture support to capa.
+
+| Difficulty | Size | Potential Mentors | Link |
+| ---- | ----- | ------ | ----- |
+| Hard | Large | Moritz, Willi, Mike | [capa#1774](https://github.com/mandiant/capa/issues/1774 ) |
+
+capa is the FLARE team’s open-source tool to identify program capabilities using an extensible rule set. Each rule is matched against features that capa extracts from a program. Extracted features include file-level features such as strings, section names, imports, and exports and function-level features such as API calls, string and byte references, instruction mnemonics, and number constants. capa uses feature extractors, called "backends", to extract features from supported file types (PE, ELF, and .NET) and architectures (32- and 64-bit x86). Each backend is built around an existing tool or library that provides file parsing and disassembly capabilities. capa uses this to extract features. capa currently implements backends using Vivisect, IDA Pro, dnfile, and Ghidra. The goal of this project is to extend capa to process ARM binaries.
+
+### Required Skills
+
+  - Solid knowledge of Python 3
+  - Basic understanding of reverse engineering / malware analysis
+  - Basic understanding of Git
+  - Moderate knowledge of the ARM architecture
+
+## capa: Ghidra P-code Support 
+
+Add P-code support to capa’s existing Ghidra backend.
+
+| Difficulty | Size | Potential Mentors | Link |
+| ---- | ----- | ------ | ----- |
+| Hard | Large | Mike, Willi | https://github.com/mandiant/capa |
+
+capa is the FLARE team’s open-source tool to identify program capabilities using an extensible rule set. Each rule is matched against features that capa extracts from a program. Extracted features include file-level features such as strings, section names, imports, and exports and function-level features such as API calls, string and byte references, instruction mnemonics, and number constants. capa uses feature extractors, called "backends", to extract features from supported file types (PE, ELF, and .NET) and architectures (32- and 64-bit x86). Each backend is built around an existing tool or library that provides file parsing and disassembly capabilities. capa uses this to extract features. capa currently implements backends using Vivisect, IDA Pro, dnfile, and Ghidra.
+
+Ghidra is a popular open-source disassembly framework with a robust API to access its analysis. Programs can interact with a wealth of information that includes parsed file formats and disassembled code. Ghidra supports P-code, a “register transfer language designed for reverse engineering applications. The language is general enough to model the behavior of many different processors. By modeling in this way, the analysis of different processors is put into a common framework, facilitating the development of retargetable analysis algorithms and applications.” The goal of this project is to adapt the existing Ghidra backend to process P-code thus enabling capa to process all of Ghidra’s supported architectures in an architecture-independent manner.
+
+### Required Skills
+
+  - Solid knowledge of Python 3
+  - Basic understanding of reverse engineering / malware analysis
+  - Basic understanding of Git
+  - Experience or interest with the Ghidra reverse engineering suite of tools
+  - Moderate knowledge of p-code and/or cross-architecture intermediate representations
