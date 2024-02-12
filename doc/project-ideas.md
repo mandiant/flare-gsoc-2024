@@ -95,14 +95,13 @@ dncil is a Common Intermediate Language (CIL) disassembly library written in Pyt
 ### Deliverables
 
 - Research
-  - Understand the basics of instruction set emulation
-  - Understand [Common Intermediate Language (CIL) instruction set](https://download.microsoft.com/download/7/3/3/733ad403-90b2-4064-a81e-01035a7fe13c/ms%20partition%20iii.pdf) (PDF), most importantly, the state of the evaluation stack before and after each CIL instruction is executed
+  - Understand the [Common Intermediate Language (CIL) instruction set](https://download.microsoft.com/download/7/3/3/733ad403-90b2-4064-a81e-01035a7fe13c/ms%20partition%20iii.pdf) (link to PDF), most importantly, the state of the evaluation stack before and after each CIL instruction is executed
   - Understand dncil’s [opcode representation](https://github.com/mandiant/dncil/blob/main/dncil/cil/opcode.py) of each CIL instruction
-- Identify Changes and Improvements
-  - Suggest changes and/or improvements to dncil, if any, needed to programmatically emulate CIL instructions and examine virtual CPU state
+- Identify Additions, Changes, and Improvements
+  - Suggest additions, changes, and improvements needed to programmatically evaluate CIL instructions and examine virtual CPU state
   - Discuss ideas with mentors and dncil user community
 - Implementation
-  - Implement proposed changes and improvements
+  - Implement finalized ideas
 - Evaluation and Knowledge Sharing
   - Test deliverables and gather feedback from users
   - Write blog post about experience and project achievements
@@ -110,7 +109,7 @@ dncil is a Common Intermediate Language (CIL) disassembly library written in Pyt
 ### Required Skills
 
   - Solid knowledge of Python 3
-  - Basic understanding of instruction set emulation and/or basic familiarity with using/the goals of emulation frameworks such as [Unicorn](https://www.unicorn-engine.org/), [flare-emu](https://github.com/mandiant/flare-emu), [speakeasy](https://github.com/mandiant/speakeasy), etc.
+  - Basic understanding of instruction set emulation or moderate familiarity with one or more emulation frameworks such as [Unicorn](https://www.unicorn-engine.org/), [flare-emu](https://github.com/mandiant/flare-emu), [speakeasy](https://github.com/mandiant/speakeasy), etc.
   - Basic understanding of reverse engineering / malware analysis
   - Basic understanding of Git
   - Experience or interest with CIL/.NET internals
@@ -124,6 +123,19 @@ Add ARM architecture support to capa.
 | Hard | Large (estimated 350 hours) | Moritz, Willi, Mike | [capa#1774](https://github.com/mandiant/capa/issues/1774 ) |
 
 capa is the FLARE team’s open-source tool to identify program capabilities using an extensible rule set. Each rule is matched against features that capa extracts from a program. Extracted features include file-level features such as strings, section names, imports, and exports and function-level features such as API calls, string and byte references, instruction mnemonics, and number constants. capa uses feature extractors, called "backends", to extract features from supported file types (PE, ELF, and .NET) and architectures (32- and 64-bit x86). Each backend is built around an existing tool or library that provides file parsing and disassembly capabilities. capa uses this to extract features. capa currently implements backends using Vivisect, IDA Pro, dnfile, and Ghidra. The goal of this project is to extend capa to process ARM binaries.
+
+### Deliverables
+
+- Research
+  - Review capa’s existing support for Intel architectures
+- Identify Additions, Changes, and Improvements
+  - Suggest additions, changes, improvements need to support ARM architecture analysis
+  - Discuss ideas with mentors and capa user community
+- Implementation
+  - Implement proposed ideas
+- Evaluation and Knowledge Sharing
+  - Test deliverables and gather feedback from users
+  - Write blog post about experience and project achievements
 
 ### Required Skills
 
@@ -144,10 +156,24 @@ capa is the FLARE team’s open-source tool to identify program capabilities usi
 
 Ghidra is a popular open-source disassembly framework with a robust API to access its analysis. Programs can interact with a wealth of information that includes parsed file formats and disassembled code. Ghidra supports P-code, a “register transfer language designed for reverse engineering applications. The language is general enough to model the behavior of many different processors. By modeling in this way, the analysis of different processors is put into a common framework, facilitating the development of retargetable analysis algorithms and applications.” The goal of this project is to adapt the existing Ghidra backend to process P-code thus enabling capa to process all of Ghidra’s supported architectures in an architecture-independent manner.
 
+### Deliverables
+
+- Research
+  - Review [capa's Ghidra integration](https://github.com/mandiant/capa/tree/master/capa/ghidra)
+  - Understand [Ghidra’s P-code support and related APIs](https://ghidra.re/ghidra_docs/api/ghidra/program/model/pcode/PcodeOp.html)
+- Identify Additions, Changes, and Improvements
+  - Suggest additions, changes, improvements to needed to support P-code analysis
+  - Discuss ideas with mentors and capa user community
+- Implementation
+  - Implement finalized ideas
+- Evaluation and Knowledge Sharing
+  - Test deliverables and gather feedback from users
+  - Write blog post about experience and project achievements
+
 ### Required Skills
 
   - Solid knowledge of Python 3
   - Basic understanding of reverse engineering / malware analysis
   - Basic understanding of Git
   - Experience or interest with the Ghidra reverse engineering suite of tools
-  - Moderate knowledge of p-code and/or cross-architecture intermediate representations
+  - Moderate knowledge of P-code and/or cross-architecture intermediate representations
